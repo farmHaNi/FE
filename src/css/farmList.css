@@ -1,0 +1,13 @@
+.farmListBox {
+  text-align: center;
+  }
+
+.farmListBox > table{
+    margin: 50px auto;
+    width: 70%;
+}
+
+.navline{
+    height: 56px;
+    background-color: #178844;
+}
