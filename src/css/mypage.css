@@ -1,0 +1,42 @@
+.Mypagebox {
+    display: flex;  /* 컨테이너를 flex로 변경 */
+    width: 100%;
+    gap: 20px;  /* 요소들 사이 간격 */
+    padding: 20px;  /* 전체 여백 */
+}
+
+.userInfo {
+    width: 25%;  /* 왼쪽 섹션 너비 */
+    /* margin: 0; */
+    border-radius: 0.5rem;
+    box-shadow: 4px 2px 10px 0px rgba(0, 0, 0, 0.13);
+    margin: 20px;
+}
+
+.myplant {
+    width: 70%;  /* 오른쪽 섹션 너비 */
+    margin: 0 50px;
+}
+.plant_box_min{
+    border-radius: 0.5rem;
+    box-shadow: 4px 2px 10px 0px rgba(0, 0, 0, 0.13);
+    margin: 20px;
+}
+.plantboxheader > h2, h4{
+    width: 50%;
+    display: inline-block;
+}
+
+
+/* 모바일 화면을 위한 반응형 디자인 */
+@media screen and (max-width: 768px) {
+    .Mypagebox {
+        flex-direction: column;  /* 모바일에서는 세로로 배치 */
+    }
+    
+    .userInfo,
+    .myplant {
+        width: 100%;  /* 모바일에서는 전체 너비 사용 */
+        margin: 10px 0;  /* 상하 여백 추가 */
+    }
+}

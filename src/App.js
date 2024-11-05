@@ -6,7 +6,7 @@ import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LoginModal from './route/login';
 import FarmList from './route/farmList';
-import Mypage from './route/mypage';
+import RenterMypage from './route/renter-mypage';
 
 function App() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -83,6 +83,12 @@ function App() {
           onLogin={handleLogin}
         />
 
+                <div className="animation-container">
+                    <div className="floating-shape shape1"></div>
+                    <div className="floating-shape shape2"></div>
+                    <div className="floating-shape shape3"></div>
+                    </div>
+
         <Routes>
           <Route path="/" element={
             <div>
@@ -91,9 +97,6 @@ function App() {
 
                   <div className="our-intro"></div>
                   <div className="animation-container">
-                    <div className="floating-shape shape1"></div>
-                    <div className="floating-shape shape2"></div>
-                    <div className="floating-shape shape3"></div>
                     <div className="back-img"></div>
                     </div>
                 </section>
@@ -108,7 +111,7 @@ function App() {
           } />
 
           <Route path='/farmList' element={<FarmList /> } />
-          <Route path='/mypage' element={<Mypage />} />
+          <Route path='/mypage' element={<RenterMypage />} />
         </Routes>
       </div>
   );

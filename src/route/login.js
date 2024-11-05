@@ -50,26 +50,16 @@ const LoginModal = ({ isOpen, onClose, onLogin }) => {
         </div>
         <form onSubmit={handleSubmit}>
         <div className="user-type-selection">
-            <label className="radio-label">
-              <input
-                type="radio"
-                name="userType"
-                value="임대인"
-                checked={formData.userType === '임대인'}
-                onChange={handleChange}
-              />
-              임대인
-            </label>
-            <label className="radio-label">
-              <input
-                type="radio"
-                name="userType"
-                value="임차인"
-                checked={formData.userType === '임차인'}
-                onChange={handleChange}
-              />
-              임차인
-            </label>
+            {['임대인', '임차인'].map((type) => (
+              <button
+                type="button"
+                key={type}
+                className={`type-button ${formData.userType === type ? 'active' : ''}`}
+                onClick={() => setFormData({ ...formData, userType: type })}
+              >
+                {type}
+              </button>
+            ))}
           </div>
           <input
             type="text"

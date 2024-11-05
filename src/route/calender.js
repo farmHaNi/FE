@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import moment from 'moment';
 import 'react-calendar/dist/Calendar.css';
-// import '../css/calendar.css';
+import '../css/mycalender.css'
 
 export default function MyCalendar() {
   const today = new Date();
